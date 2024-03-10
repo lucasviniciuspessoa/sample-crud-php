@@ -1,6 +1,13 @@
 <?php
 
 require "config.php";
+$lista = [];
+$sql = $pdo->query("SELECT * FROM usuarios");
+if ($sql->rowCount() > 0) {
+  $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 
 ?>
 
@@ -15,6 +22,14 @@ require "config.php";
     <th>EMAIL</th>
     <th>AÇÕES</th>
   </tr>
+  <?php
+  foreach ($lista as $usuario) : ?>
+    <tr>
+      <td><?= $usuario['id']; ?></td>
+      <td><?= $usuario['nome']; ?></td>
+      <td><?= $usuario['email']; ?></td>
+    </tr>
+  <?php endforeach; ?>
 
 
 </table>
