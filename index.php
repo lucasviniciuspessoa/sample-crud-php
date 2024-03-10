@@ -28,6 +28,10 @@ if ($sql->rowCount() > 0) {
       <td><?= $usuario['id']; ?></td>
       <td><?= $usuario['nome']; ?></td>
       <td><?= $usuario['email']; ?></td>
+      <td>
+        <a href="editar.php?id=<?= $usuario['id']; ?>">[Editar]</a>
+        <a href="excluir.phpid=<?= $usuario['id']; ?>">[Excluir]</a>
+      </td>
     </tr>
   <?php endforeach; ?>
 
