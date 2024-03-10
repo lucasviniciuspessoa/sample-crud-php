@@ -30,7 +30,7 @@ if ($sql->rowCount() > 0) {
       <td><?= $usuario['email']; ?></td>
       <td>
         <a href="editar.php?id=<?= $usuario['id']; ?>">[Editar]</a>
-        <a href="excluir.phpid=<?= $usuario['id']; ?>">[Excluir]</a>
+        <a href="deletar.php?id=<?= $usuario['id']; ?>">[Excluir]</a>
       </td>
     </tr>
   <?php endforeach; ?>
